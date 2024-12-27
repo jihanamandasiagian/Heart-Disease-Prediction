@@ -96,7 +96,7 @@ class VotingClassifier:
         return np.apply_along_axis(lambda x: np.bincount(x).argmax(), axis=0, arr=predictions)
 
 def load_data():
-    data = pd.read_csv(r'/mount/src/prediction_hearth_disease/heart_disease_data.csv')
+    data = pd.read_csv(r'/mount/src/heart-disease-prediction/Hearth_Disease_Prediction/heart_disease_data.csv')
     X = data.drop(columns=['num']).values  
     y = data['num'].astype(int).values 
     return X, y
